@@ -116,12 +116,11 @@ Para construir modelos de IA, utilizamos dois grupos de conjuntos de dados. O pr
       3. Para cada sequência, clique nos links correspondentes para fazer o download dos dados de profundidade, dados RGB, dados de sincronização e dados do acelerômetro, conforme necessário.
       
       4. O download resultará em arquivos zip contendo as informações relevantes para cada sequência.
-         
+
+
 ### 1.2.3 Normalização de Dados
 
-Na etapa de normalização deste conjunto de dados, que é fundamental para o método de classificação, foi necessário extrair o conteúdo de interesse das imagens. Inicialmente, optamos por utilizar apenas os conjuntos de dados que continham anotações de mapeamento, pois essas anotações nos permitiam recortar as imagens de maneira eficaz.
+Ao realizar a normalização de dados, nos deparamos com várias dificuldades. A classificação se torna eficaz apenas quando nosso objeto de estudo está destacado na imagem. Portanto, é necessário recortar as imagens para conter apenas as pessoas. No entanto, para realizar esse recorte de forma eficaz e rápida, precisamos que as etiquetas (labels) contenham os mapeamentos apropriados. Infelizmente, não conseguimos aplicar esse método em todos os casos; somente nos dados da ImViA foi possível, pois tínhamos descrito adequadamente o método de mapeamento e, após verificação, o recorte mostrou-se eficiente para todos os dados mapeados. Para os demais conjuntos de dados, o trabalho necessário foi mais árduo, exigindo o recorte manual das imagens. Abaixo, descreveremos o processo para cada conjunto de dados:
 
-Utilizamos um simples código em Python que, ao receber uma imagem e seu rótulo correspondente, aplicava as coordenadas do rótulo para realizar o recorte e, em seguida, salvava a nova imagem. Isso resultava em imagens prontas para serem usadas no treinamento.
-
-Para aumentar nossa base de dados, planejamos utilizar os resultados da detecção e classificação para identificar quedas automaticamente. Posteriormente, essas quedas seriam verificadas visualmente por meio de um sistema de revisão, semelhante a um processo de revisão de timelapse em um editor de vídeo convencional. Dessa forma, poderíamos validar os resultados e garantir a qualidade das anotações adicionais.
+Para expandir nossa base de dados, planejamos utilizar os resultados da detecção e classificação para identificar quedas automaticamente. Posteriormente, essas quedas seriam verificadas visualmente por meio de um sistema de revisão, semelhante a um processo de revisão de timelapse em um editor de vídeo convencional. Dessa forma, poderíamos validar os resultados e garantir a qualidade das anotações adicionais.
 </details><br>
