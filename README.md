@@ -40,7 +40,7 @@ Para construir modelos de IA, utilizamos dois grupos de conjuntos de dados. O pr
       
    Depois de verificar que a conversão foi realizada corretamente, podemos prosseguir com o treinamento.
       
-   Os códigos completos e informações detalhadas sobre a transformação estão disponíveis em outro repositório. Você pode encontrar mais informações [neste link](https://1drv.ms/f/s!ArPFsy1SEFgWhIhjBBqUEIBE25SlMw?e=5LFAFo).
+   Os códigos completos e informações detalhadas sobre a transformação estão disponíveis em outro repositório. Você pode encontrar mais informações [neste link](https://github.com/jorgebandeo/Dataset_FallProject/tree/main/Detecção).
 </details>
 
 
