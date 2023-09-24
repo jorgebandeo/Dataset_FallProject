@@ -129,6 +129,23 @@ Para construir modelos de IA, utilizamos dois grupos de conjuntos de dados. O pr
    <summary><strong>1.2.3 Normalização de Dados</strong></summary>
 
 Ao realizar a normalização de dados, nos deparamos com várias dificuldades. A classificação se torna eficaz apenas quando nosso objeto de estudo está destacado na imagem. Portanto, é necessário recortar as imagens para conter apenas as pessoas. No entanto, para realizar esse recorte de forma eficaz e rápida, precisamos que as etiquetas (labels) contenham os mapeamentos apropriados. Infelizmente, não conseguimos aplicar esse método em todos os casos; somente nos dados da ImViA foi possível, pois tínhamos descrito adequadamente o método de mapeamento e, após verificação, o recorte mostrou-se eficiente para todos os dados mapeados. Para os demais conjuntos de dados, o trabalho necessário foi mais árduo, exigindo o recorte manual das imagens. Abaixo, descreveremos o processo para cada conjunto de dados:
+   <details>
+   <summary><strong>UTTEJ KUMAR KANDAGATLA </strong></summary>
+   Para tornar o uso deste conjunto de dados possível, tomamos algumas medidas iniciais. Primeiramente, notamos que os nomes das imagens indicavam seu estado, "fall" ou "not fall", o que nos permitiu separá-los facilmente, mesmo quando armazenados em uma única pasta. Além disso, identificamos um problema ao realizar testes com os rótulos mapeados: os recortes resultantes estavam incorretos, pois a pessoa não estava contida na região recortada. Não conseguimos compreender o método de mapeamento utilizado, o que nos levou a realizar os recortes manualmente.
 
+   Para resolver esse problema, desenvolvemos um código que percorre uma pasta principal e suas subpastas, coletando todas as imagens. Em seguida, o código abre cada imagem e permite que o usuário utilize o cursor para recortar a região de interesse. A imagem recortada é então salva em uma nova pasta criada na pasta raiz do conjunto de dados.
+   
+   É importante destacar que, após efetuar o recorte, não há um botão de "desfazer". Portanto, para voltar atrás, você pode acessar a pasta de [Classificação](https://github.com/jorgebandeo/Dataset_FallProject/tree/main/recorte manual) no repositório para acessar as versões originais das imagens ou realizar o processo novamente, caso necessário.
+   </details>
+   <details>
+   <summary><strong>ImViA</strong></summary>
+   
+   </details>
+   <details>
+   <summary><strong>Adhikari, Kripesh, Hamid Bouchachia, and Hammadi Nait-Charif </strong></summary>
+   </details>
+   <details>
+   <summary><strong>Michal Kępski</strong></summary>
+   </details>
 Para expandir nossa base de dados, planejamos utilizar os resultados da detecção e classificação para identificar quedas automaticamente. Posteriormente, essas quedas seriam verificadas visualmente por meio de um sistema de revisão, semelhante a um processo de revisão de timelapse em um editor de vídeo convencional. Dessa forma, poderíamos validar os resultados e garantir a qualidade das anotações adicionais.
 </details><br>

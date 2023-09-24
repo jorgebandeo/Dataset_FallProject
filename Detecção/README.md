@@ -1,0 +1,8 @@
+<h1 align="center"> ~ como proceder ~ </h1>
+Certamente, para melhorar a legibilidade e destacar os nomes de arquivos, vou colocar os nomes de arquivo em uma cor diferente. Aqui está o texto com os nomes de arquivo em uma cor diferente:
+
+Este dataset se destaca pela meticulosa catalogação e descrição de seus dados. O método de mapeamento adotado usa pares de coordenadas (x, y) para representar o canto superior esquerdo e o canto inferior direito de cada objeto na imagem. Para garantir um processamento preciso e evitar erros, empregamos um conjunto de três códigos disponíveis na pasta <span style="color: green;">"Normalização por conjunto"</span>.
+
+O primeiro código é o <span style="color: green;">"Verificação de Label"</span>. Ele requer dois conjuntos de dados: a imagem e o arquivo de texto associado. O formato desses dados deve ser "0 100 100 200 200" (os números podem variar), e o código verifica se o rótulo está correto. Após a verificação do rótulo, você pode prosseguir para o código de <span style="color: green;">"Normalização"</span>. Este código necessita de dois caminhos: a pasta que contém as imagens e a pasta que contém os arquivos de rótulo em formato .txt. Certifique-se de que o nome do arquivo de imagem corresponda ao nome do arquivo .txt correspondente para um funcionamento adequado. Este código realizará ajustes em todos os arquivos dentro da pasta.
+
+Por fim, para verificar se a normalização foi feita corretamente, utilize o arquivo de teste de normalização. Ele marcará o retângulo na imagem resultante da normalização, permitindo a validação visual do processo.
