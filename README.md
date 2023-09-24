@@ -135,17 +135,33 @@ Ao realizar a normalização de dados, nos deparamos com várias dificuldades. A
 
    Para resolver esse problema, desenvolvemos um código que percorre uma pasta principal e suas subpastas, coletando todas as imagens. Em seguida, o código abre cada imagem e permite que o usuário utilize o cursor para recortar a região de interesse. A imagem recortada é então salva em uma nova pasta criada na pasta raiz do conjunto de dados.
    
-   É importante destacar que, após efetuar o recorte, não há um botão de "desfazer". Portanto, para voltar atrás, você pode acessar a pasta de [Classificação](https://github.com/jorgebandeo/Dataset_FallProject/tree/main/recorte manual) no repositório para acessar as versões originais das imagens ou realizar o processo novamente, caso necessário.
+   É importante destacar que, após efetuar o recorte, não há um botão de "desfazer". Portanto, para voltar atrás, você pode acessar a pasta de [Classificação](https://github.com/jorgebandeo/Dataset_FallProject/tree/main/recorte%20manual) no repositório para acessar as versões originais das imagens ou realizar o processo novamente, caso necessário.
    </details>
    <details>
    <summary><strong>ImViA</strong></summary>
-   
+   Para este dataset, inicialmente, cada frame de vídeo foi transformado em uma imagem separada. Posteriormente, foi empregado um arquivo CSV correspondente ao vídeo para recortar as áreas que não incluíam a pessoa. Embora o código específico não tenha sido apresentado devido à sua indisponibilidade, ele segue a seguinte lógica:
+
+   1. Carregue o arquivo CSV que contém informações sobre o vídeo, como coordenadas da pessoa em cada frame.
+      Iteração pelos Frames:
+
+   2. Para cada linha no arquivo CSV (cada frame do vídeo):
+      Extraindo Coordenadas:
+
+   3. Extraia as coordenadas que representam a posição da pessoa no frame. Isso pode incluir informações sobre o canto superior esquerdo (x1, y1) e o canto inferior direito (x2, y2) do retângulo que envolve a pessoa.
+      Recorte da Área da Pessoa:
+
+   4. Utilize as coordenadas extraídas para recortar a área da imagem que contém a pessoa. Isso pode ser feito definindo uma região de interesse (ROI) na imagem original com base nas coordenadas.
+      Salvando o Recorte:
+
+   5. Salve o recorte da área da pessoa como uma nova imagem ou frame, que pode ser posteriormente usado no conjunto de dados.
+      Repetição:
+
+   6. Repita o processo para todas as linhas do arquivo CSV, processando cada frame do vídeo e extraindo a área da pessoa.
    </details>
    <details>
-   <summary><strong>Adhikari, Kripesh, Hamid Bouchachia, and Hammadi Nait-Charif </strong></summary>
-   </details>
-   <details>
-   <summary><strong>Michal Kępski</strong></summary>
+   <summary><strong>Adhikari, Kripesh, Hamid Bouchachia, and Hammadi Nait-Charif  E Michal Kępski</strong></summary>
+
+   Para os dois conjuntos de dados restantes, a ideia principal é aplicar o modelo obtido para aprimorar esses conjuntos e criar um único conjunto de dados coeso e funcional. Este conjunto resultante será caracterizado por melhorias de qualidade, a partir das quais será possível coletar mais dados relevantes, aproveitando as próprias melhorias feitas anteriormente. Isso criará um ciclo de aprimoramento contínuo, onde o conjunto de dados se torna cada vez mais útil e valioso.
    </details>
 Para expandir nossa base de dados, planejamos utilizar os resultados da detecção e classificação para identificar quedas automaticamente. Posteriormente, essas quedas seriam verificadas visualmente por meio de um sistema de revisão, semelhante a um processo de revisão de timelapse em um editor de vídeo convencional. Dessa forma, poderíamos validar os resultados e garantir a qualidade das anotações adicionais.
 </details><br>
